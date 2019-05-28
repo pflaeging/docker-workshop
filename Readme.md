@@ -38,6 +38,14 @@ Now you can have a look at your famous application with:
 - <http://localhost:8080> -> if you are running docker local
 - <http://192.168.56.102:8080> -> if you are using the virtualbox installation in my workshops (maybe your IP is different. You can verify on the console screen!)
 
+## Kubernetes
+
+- import both YAML files in directory kubernetes with ```kubectl create -f filename.yaml````
+- with ```kubectl get service envprinter-service``` you get the port on which the service is reachable
+
+(it's the port number direct before /TCP)
+
+
 
 ---
 

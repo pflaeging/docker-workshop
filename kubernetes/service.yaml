@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: envprinter-service
 spec:
+  type: NodePort
   selector:
     app: envprinter
   ports:
