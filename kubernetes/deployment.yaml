@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: envprinter-deployment
+  labels:
+    app: envprinter
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: envprinter
+  template:
+    metadata:
+      labels:
+        app: envprinter
+    spec:
+      containers:
+      - name: envprinter
+        image: reg.pflaeging.net/public/envprinter:latest
+        ports:
+        - containerPort: 5000
